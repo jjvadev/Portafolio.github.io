@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Web Profesional | Experiencias Digitales Impactantes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://kit.fontawesome.com/a2d9d5c6e4.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary: #3f37c9;
+            --accent: #4895ef;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gradient: linear-gradient(135deg, #4361ee 0%, #3f37c9 100%);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: #fafafa;
+            overflow-x: hidden;
+        }
+
+        .diseno-web {
+            max-width: 100vw;
+            overflow: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: var(--gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 0 5%;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            opacity: 0.5;
+        }
+
+        .contenido {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            padding: 2rem 0;
+        }
+
+        .titulo {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .subtitulo {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            max-width: 600px;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Secciones */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        section {
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        /* Características */
+        .caracteristicas {
+            background: white;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .card i {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Proceso */
+        .proceso {
+            background: #f5f7ff;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 2rem;
+            list-style: none;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        .timeline li {
+            position: relative;
+            padding: 2rem 2rem 2rem 3rem;
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            counter-increment: step;
+        }
+
+        .timeline li::before {
+            content: counter(step);
+            position: absolute;
+            left: -2.5rem;
+            top: 2rem;
+            width: 3rem;
+            height: 3rem;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .timeline li strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Planes */
+        .planes {
+            background: white;
+        }
+
+        .plan {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .plan h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .precio {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+            color: var(--primary);
+        }
+
+        .plan ul {
+            list-style: none;
+            margin: 1.5rem 0;
+            flex-grow: 1;
+        }
+
+        .plan ul li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-plan {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-top: auto;
+        }
+
+        .btn-plan:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(67, 97, 238, 0.3);
+        }
+
+        .destacado {
+            border: 2px solid var(--primary);
+            position: relative;
+            transform: scale(1.05);
+        }
+
+        .destacado::after {
+            content: 'Más popular';
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Animaciones */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 4rem 5%;
+            }
+
+            .destacado {
+                transform: none;
+            }
+
+            .timeline li {
+                padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+            }
+
+            .timeline li::before {
+                left: -1.75rem;
+                top: 1.5rem;
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                text-align: center;
+            }
+
+            .subtitulo {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="diseno-web">
+        <header class="hero">
+            <div class="contenido">
+                <h1 class="titulo">Diseño Web que <span class="floating">Impacta</span></h1>
+                <p class="subtitulo">Creamos experiencias digitales centradas en el usuario, visualmente atractivas y con alto rendimiento que convierten visitantes en clientes.</p>
+                <a href="#planes" class="btn-cta">Ver Planes <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </header>
+
+        <section class="caracteristicas">
+            <h2 class="section-title">¿Por qué elegirnos?</h2>
+            <div class="grid">
+                <div class="card animate__animated animate__fadeInUp" style="animation-delay: 0.1s">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>100% Responsivo</h3>
+                    <p>Diseño adaptativo que se ve perfecto en cualquier dispositivo, desde móviles hasta pantallas 4K.</p>
+                </div>
+                <div class="card animate__animated animate__fadeInUp" style="animation-delay: 0.3s">
+                    <i class="fas fa-brain"></i>
+                    <h3>UX/UI Estratégico</h3>
+                    <p>Diseño centrado en el usuario con psicología aplicada para maximizar conversiones y engagement.</p>
+                </div>
+                <div class="card animate__animated animate__fadeInUp" style="animation-delay: 0.5s">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Rendimiento Óptimo</h3>
+                    <p>Sitios ultra rápidos con tiempos de carga menores a 2 segundos y optimización SEO integrada.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="proceso">
+            <h2 class="section-title">Nuestro Proceso</h2>
+            <ol class="timeline">
+                <li><strong>1. Descubrimiento:</strong> Investigación profunda de tu negocio, objetivos y audiencia para crear una estrategia digital efectiva.</li>
+                <li><strong>2. Prototipado:</strong> Diseño de wireframes interactivos y pruebas de usabilidad con herramientas como Figma y Adobe XD.</li>
+                <li><strong>3. Desarrollo:</strong> Construcción con código limpio, tecnologías modernas (HTML5, CSS3, JavaScript ES6+) y arquitectura escalable.</li>
+                <li><strong>4. Lanzamiento:</strong> Optimización técnica (Core Web Vitals), accesibilidad WCAG 2.1 y capacitación para administración.</li>
+            </ol>
+        </section>
+
+        <section class="planes" id="planes">
+            <h2 class="section-title">Planes y Precios</h2>
+            <div class="grid">
+                <div class="plan animate__animated animate__fadeIn" style="animation-delay: 0.2s">
+                    <h3>Básico</h3>
+                    <p class="precio">$150</p>
+                    <ul>
+                        <li>1 página landing profesional</li>
+                        <li>Diseño 100% responsivo</li>
+                        <li>Formulario de contacto</li>
+                        <li>Optimización básica SEO</li>
+                        <li>Soporte por 30 días</li>
+                    </ul>
+                    <a href="#" class="btn-plan">Elegir Plan</a>
+                </div>
+                <div class="plan destacado animate__animated animate__fadeIn" style="animation-delay: 0.4s">
+                    <h3>Profesional</h3>
+                    <p class="precio">$300</p>
+                    <ul>
+                        <li>Hasta 5 secciones personalizadas</li>
+                        <li>Animaciones UI/UX avanzadas</li>
+                        <li>SEO completo (On-Page)</li>
+                        <li>Integración con redes sociales</li>
+                        <li>Soporte por 60 días</li>
+                    </ul>
+                    <a href="#" class="btn-plan">Elegir Plan</a>
+                </div>
+                <div class="plan animate__animated animate__fadeIn" style="animation-delay: 0.6s">
+                    <h3>Avanzado</h3>
+                    <p class="precio">$500+</p>
+                    <ul>
+                        <li>Sitio web completamente personalizado</li>
+                        <li>CMS o Panel de Administración</li>
+                        <li>Integración con APIs y servicios</li>
+                        <li>Estrategia de contenido</li>
+                        <li>Soporte por 90 días</li>
+                    </ul>
+                    <a href="#" class="btn-plan">Contactar</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2025 JV Freelance | Diseño Web Profesional</p>
+            <p style="margin-top: 0.5rem; opacity: 0.8;">Creado con <i class="fas fa-heart" style="color: #ff4757;"></i> y buenas prácticas de UX/UI</p>
+        </footer>
+    </section>
+
+    <script>
+        // Efecto de scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animaciones al hacer scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .plan').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
